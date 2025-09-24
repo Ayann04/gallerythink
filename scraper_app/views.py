@@ -351,6 +351,7 @@ def trigger_scrape(request):
             input_box.send_keys(deed_type)
             time.sleep(5)
             _create_status(new_run, "Screenshot after filling deed type", pil_image=_screenshot_page(driver))
+            time.sleep(200)
             input_box.send_keys(Keys.ENTER)
             time.sleep(5)
             captcha_imgs = driver.find_elements(By.CSS_SELECTOR, "div.input-group>img")
